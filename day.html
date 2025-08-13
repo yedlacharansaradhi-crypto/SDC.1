@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Largest Number</title>
+</head>
+<body>
+    <h2>Find the Largest of Three Numbers</h2>
+
+    <label>Enter first number (a): </label>
+    <input type="number" id="num1"><br><br>
+
+    <label>Enter second number (b): </label>
+    <input type="number" id="num2"><br><br>
+
+    <label>Enter third number (c): </label>
+    <input type="number" id="num3"><br><br>
+
+    <button onclick="findLargest()">Find Largest</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function findLargest() {
+            // Get input values and convert to numbers
+            let a = parseFloat(document.getElementById('num1').value);
+            let b = parseFloat(document.getElementById('num2').value);
+            let c = parseFloat(document.getElementById('num3').value);
+            let largest;
+
+            // Nested if-else to find largest
+            if (a > b) {
+                if (a > c) {'/'
+                    largest = a;
+                } else {
+                    largest = c;
+                }
+            } else {
+                if (b > c) {
+                    largest = b;
+                } else {
+                    largest = c;
+                }
+            }
+
+            // Display result
+            document.getElementById('result').textContent = "The largest number is: " + largest;
+        }
+    </script>
+</body>
+</html>
